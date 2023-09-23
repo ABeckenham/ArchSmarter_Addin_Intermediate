@@ -86,12 +86,21 @@ namespace ArchSmarter_Addin_Intermediate
                         ScheduleFilter schFilter = new ScheduleFilter(FldRmDept.FieldId, ScheduleFilterType.Equal, dept);
                         DeptRoomSch.Definition.AddFilter(schFilter);
 
+                        //08A forgot to group by Level!
+                        ScheduleSortGroupField sortLevel = new ScheduleSortGroupField(FldRmLevel.FieldId);
+                        sortLevel.ShowHeader = true;
+                        sortLevel.ShowFooter = true;
+                        //make sure to shoe header or footer before adding definition!
+                        DeptRoomSch.Definition.AddSortGroupField(sortLevel);
+                        
                         //08. Sort by RoomName
                         ScheduleSortGroupField sortRoomName = new ScheduleSortGroupField(FldRmName.FieldId);
                         DeptRoomSch.Definition.AddSortGroupField(sortRoomName);
-                        DeptRoomSch.Definition.ShowGrandTotal = true;
+                        
+
                         //10. the toal area
-                        sortRoomName.ShowFooter = true;
+                        
+                        DeptRoomSch.Definition.ShowGrandTotal = true;
 
                         //09. add total area for level group
                         FldRmArea.DisplayType = ScheduleFieldDisplayType.Totals;
@@ -106,8 +115,10 @@ namespace ArchSmarter_Addin_Intermediate
                     //11b. add only deptment name and areas.
                     ScheduleField deptName = DeptSchAll.Definition.AddField(ScheduleFieldType.Instance, ParamRmDept.Id);
                     ScheduleField deptArea = DeptSchAll.Definition.AddField(ScheduleFieldType.ViewBased, ParamRmArea.Id);
+                    ScheduleField deptCont = DeptSchAll.Definition.AddField(ScheduleFieldType.Count);
                     //11c. display totals of areas
                     deptArea.DisplayType = ScheduleFieldDisplayType.Totals;
+                    deptCont.DisplayType = ScheduleFieldDisplayType.Totals;
                     //11.d sort by department name 
                     ScheduleSortGroupField sortdeptName = new ScheduleSortGroupField(deptName.FieldId);
                     DeptSchAll.Definition.AddSortGroupField(sortdeptName);
