@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Command">
+    <Text>ArchSmarter_Addin_Intermediate - Command 1</Text>
+    <Description>Some description for ArchSmarter_Addin_Intermediate</Description>
+    <Assembly>ArchSmarter_Addin_Intermediate.dll</Assembly>
+    <FullClassName>ArchSmarter_Addin_Intermediate.Command1</FullClassName>
+    <ClientId>c6e07744-60d0-4306-8774-469ed09a1a52</ClientId>
+    <VendorId>com.YOUR COMPANY NAME</VendorId>
+    <VendorDescription>YOUR COMPANY NAME, YOUR COMPANY URL</VendorDescription>
+  </AddIn>
+  <AddIn Type="Command">
+    <Text>ArchSmarter_Addin_Intermediate - Command 2</Text>
+    <Description>Some description for ArchSmarter_Addin_Intermediate</Description>
+    <Assembly>ArchSmarter_Addin_Intermediate.dll</Assembly>
+    <FullClassName>ArchSmarter_Addin_Intermediate.Command2</FullClassName>
+    <ClientId>e170249b-efb9-4ed1-84e5-e74c27a9d862</ClientId>
+    <VendorId>com.YOUR COMPANY NAME</VendorId>
+    <VendorDescription>YOUR COMPANY NAME, YOUR COMPANY URL</VendorDescription>
+  </AddIn>
+	<AddIn Type="Command">
+		<Text>ArchSmarter_Addin_Intermediate - RAI_Mod1_Schedules</Text>
+		<Description>Some description for ArchSmarter_Addin_Intermediate</Description>
+		<Assembly>ArchSmarter_Addin_Intermediate.dll</Assembly>
+		<FullClassName>ArchSmarter_Addin_Intermediate.RAI_Mod1_Schedules</FullClassName>
+		<ClientId>A496D97B-8A5E-49DB-B3EB-8CDFB58FCD4F</ClientId>
+		<VendorId>com.YOUR COMPANY NAME</VendorId>
+		<VendorDescription>YOUR COMPANY NAME, YOUR COMPANY URL</VendorDescription>
+	</AddIn>
+  <AddIn Type="Application">
+    <Name>ArchSmarter_Addin_Intermediate</Name>
+    <Assembly>ArchSmarter_Addin_Intermediate.dll</Assembly>
+    <FullClassName>ArchSmarter_Addin_Intermediate.App</FullClassName>
+    <ClientId>9711f405-30f7-4e72-85d6-5bfd2dccf965</ClientId>
+    <VendorId>com.YOUR COMPANY NAME</VendorId>
+    <VendorDescription>YOUR COMPANY NAME, YOUR COMPANY URL</VendorDescription>
+  </AddIn>
+</RevitAddIns>
