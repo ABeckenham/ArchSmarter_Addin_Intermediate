@@ -95,11 +95,9 @@ namespace ArchSmarter_Addin_Intermediate
                         
                         //08. Sort by RoomName
                         ScheduleSortGroupField sortRoomName = new ScheduleSortGroupField(FldRmName.FieldId);
-                        DeptRoomSch.Definition.AddSortGroupField(sortRoomName);
-                        
+                        DeptRoomSch.Definition.AddSortGroupField(sortRoomName);                        
 
-                        //10. the toal area
-                        
+                        //10. the toal area                        
                         DeptRoomSch.Definition.ShowGrandTotal = true;
 
                         //09. add total area for level group
